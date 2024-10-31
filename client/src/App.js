@@ -4,7 +4,9 @@ import { DndProvider, useDrag, useDrop } from "react-dnd";
 import { HTML5Backend } from "react-dnd-html5-backend";
 
 // 환경 변수에서 WebSocket 서버 URL을 가져옵니다.
-const socket = io(process.env.REACT_APP_SOCKET_SERVER);
+const socket = io(process.env.REACT_APP_SOCKET_SERVER, {
+  withCredentials: true
+});
 
 // 예시 이미지 URL 목록
 const memberImages = [
